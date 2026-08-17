@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>kenangan wisuda</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="wrap">
+    <div class="top">
+        <div class="top-in">
+            <div class="logo">
+                <span class="logo-icon"><i class="fas fa-graduation-cap"></i></span>
+                <div>
+                    <h1>kenangan wisuda</h1>
+                    <p>2026</p>
+                </div>
+            </div>
+            <div class="top-right">
+                <span>untukmu</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="box">
+            <div class="box-head">
+                <div>
+                    <h2><i class="fas fa-images"></i> galeri</h2>
+                    <span class="sub">foto-foto dari hari itu</span>
+                </div>
+                <button class="btn-add" id="addPhotoBtn">tambah</button>
+            </div>
+            <div class="grid" id="galleryGrid"></div>
+        </div>
+
+        <div class="box">
+            <div class="box-head">
+                <div>
+                    <h2><i class="fas fa-heart"></i> ucapan</h2>
+                    <span class="sub">dari orang terdekat</span>
+                </div>
+                <span class="badge" id="wishCount">0</span>
+            </div>
+
+            <form class="form" id="wishForm">
+                <div class="row">
+                    <input type="text" id="namaPengirim" placeholder="nama" required />
+                    <input type="text" id="hubungan" placeholder="hubungan" />
+                </div>
+                <textarea id="isiUcapan" rows="2" placeholder="tulis ucapan..." required></textarea>
+                <button class="btn-send" type="submit">kirim</button>
+            </form>
+
+            <div class="list" id="wishList"></div>
+        </div>
+    </div>
+
+    <div class="foot">
+        <p>dibuat untuk kenangan</p>
+    </div>
+</div>
+
+<div class="modal" id="photoModal">
+    <div class="modal-in">
+        <button class="modal-close" id="closeModal">&times;</button>
+        <h3>tambah foto</h3>
+        <form id="photoForm">
+            <div class="upload">
+                <input type="file" id="photoFile" accept="image/*" />
+                <label for="photoFile">
+                    <span>pilih foto</span>
+                    <small>jpg, png, gif · max 5mb</small>
+                </label>
+                <span class="file-name" id="fileName"></span>
+            </div>
+            <div class="preview-box" id="previewContainer" style="display:none;">
+                <img id="previewImage" />
+            </div>
+            <input type="text" id="photoTitle" placeholder="judul" required />
+            <input type="text" id="photoDate" placeholder="tanggal" />
+            <button class="btn-save" type="submit">simpan</button>
+        </form>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
